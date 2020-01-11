@@ -9,59 +9,83 @@ import styled from "styled-components";
 // height:150px;
 // `;
 
-const Title = styled.h1`
+const Title = styled.h3`
+width: 100%;
+display: flex;
+// flex-direction: column;
 color: blue;
-line-height: 1.5rem;
-background: rgb(222,222,222);
+line-height: 1.4rem;
+// background: rgb(222,222,222);
 `;
 
-// const TextArea = styled.area`
+// const FilmSection = styled.div`
+// width: 100%;
 // display: flex;
-// width: 90%;
-// margin-left: 5%;
-// margin-right: 5%;
-// background: rgb(222,222,222);
-// line-height: 1.5rem;
+// width: 45px;
+// padding: 1%;
+// flex-flow: row wrap;
+
 // `;
+
+const Container = styled.div`
+display: flex;
+flex-direction: column;
+width: 60%:
+margin: 2px;
+border: 1px solid gray;
+justify-conent: space-evenly;
+align-items: center;
+background: green;
+
+`;
 
 const ObjectProperties = styled.p`
 display: flex;
-
+// flex-direction: column;
+width: 90%;
+// flex-wrap: wrap;
+line-height: 1rem;
+margin: 2px;
+// border: 1px solid blue;
+align-items: left;
 `;
 
-export default function StarwarElemt(props){
+export default function StarwarElement(props){
     return (
-        <>
-            
+        <Container>
+
+            {/* <ObjectProperties>
+                {props.mass % 7}
+            </ObjectProperties>
+             */}
             <Title>
-                {props.name}
+                Name: {props.name}
             </Title>
       
             <ObjectProperties>
-                {props.height}
+                Height: {props.height} Ft
             </ObjectProperties>
 
              <ObjectProperties>
-                {props.mass}
+                Weight: {props.mass} Lbs
             </ObjectProperties>
 
             <ObjectProperties>
-                {props.bitthyear}
+              Year of birth: {props.birth_year}
             </ObjectProperties>
 
              <ObjectProperties>
-                {props.gender}
+               Gender: {props.gender}
             </ObjectProperties>
 
              <ObjectProperties>
-                {props.homeworld}
+               Home world: {props.homeworld}
             </ObjectProperties>
 
-             <ObjectProperties>
-                {props.fils}
-            </ObjectProperties>
-             
-             
-        </>
+             {/* <FilmSection>
+               Films: {props.films}
+            </FilmSection>
+                */}
+        </Container>
     )
 }
