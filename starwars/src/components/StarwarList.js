@@ -1,6 +1,15 @@
 import React, { useState, useEffect  } from "react";
 import axios from "axios";
 import StarwarElement from "./StarwarElement";
+import styled from "styled-components";
+
+const Container = styled.div`
+display: flex;
+width: 33%:
+height: fit-content;
+`;
+
+
 
 
 
@@ -13,43 +22,53 @@ useEffect(() => {
     
 
 axios
-            .get(`https://swapi.co/api/people/25`)
+            .get(`https://swapi.co/api/people/30`)
         
 
-            // using API url to fetch data
+            // using API url to fetch stars
             
             .then(res => {
 
-                console.log(res); // displaying data to check its structure
+                // console.log(res); // displaying stars to check its structure
 
-                setStars(res.data);
+                setStars(res.stars);
 
                 // set the state of the photo
     
             })
             .catch(err => {
-                console.log(`Sorry, data was not returned !`, err);
+                console.log(`Sorry, stars was not returned !`, err);
             });      
 }, []);
     
     // console.log(`Stars are: ${Stars}`); or 
-     console.log("My Stars object:", Stars);
+    //  console.log("My Stars object:", Stars);
 
     return (
-        <div className="Stars">
+        <Container>
             
             {
-            <StarwarElement
-                            // title={photos.title}
-                            // hdurl={photos.hdurl}
-                            // date={photos.date}
-                            // copyright={photos.copyright}
-                            // explanation={photos.explanation}
-                            // url={photos.url}
-                           
-                        />    
-          }      
+                Stars.map(stars => {
+                    return (
+                        <StarwarElement
+                            key = {stars.mass}
+                            name={stars.name}
+                            height={stars.height}
+                            date={stars.mass}
+                            birthyear={stars.birthday}
+                            gender={stars.gender}
+                            homeworld={stars.homeworld}
+                            fils={stars.fils}
+                        />
+                    );
+                
+                }  
+                )
+            }          
                         
-         </div>
-    );
+        </Container>
+    )
 }
+
+
+ 
