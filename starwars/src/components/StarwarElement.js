@@ -7,6 +7,9 @@ width: 90%;
 display: flex;
 color: blue;
 line-height: 1.4rem;
+background: gray;
+justify-content: center;
+border-radius: 4px;
 `;
 
 
