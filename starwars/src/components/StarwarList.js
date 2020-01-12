@@ -1,13 +1,29 @@
 import React, { useState, useEffect  } from "react";
 import axios from "axios";
 import StarwarElement from "./StarwarElement";
-// import styled from "styled-components";
+import styled from "styled-components";
 
-// const Container = styled.div`
-// display: flex;
-// width: 33%:
-// `;
+const Wrapper = styled.div`
+width: 100%;
+height: vh;
+display: flex;
+justify-content: space-between;
+align-items: center;
+flex-wrap: wrap;
+`;
+const Card= styled.div`
+display: flex;
+flex-direction: column;
+width: 33%;
+margin-bottom: 5px;
+justify-conent: space-evenly;
+align-items: center;
+background: rgb(231,232,233);
+box-sizing: border-box;
+border-radius: 5px;
 
+
+`;
 
 
 
@@ -34,11 +50,12 @@ useEffect(() => {
     console.log("stars is now: ", stars);
 
     return (
-        <div class = "wrapper">
+        <Wrapper>
             
             {
                 stars.map(stars => {
                     return (
+                        <Card>
                         <StarwarElement
                             key = {stars.birth_year % 7}
                             name={stars.name}
@@ -48,14 +65,15 @@ useEffect(() => {
                             gender={stars.gender}
                             homeworld={stars.homeworld}
                             // films={stars.films}
-                        />
+                            />
+                            </Card>
                     );
                 
                 }  
                 )
             }          
                         
-        </div>
+        </Wrapper>
     )
 }
 

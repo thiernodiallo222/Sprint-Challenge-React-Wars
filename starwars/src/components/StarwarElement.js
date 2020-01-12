@@ -10,49 +10,25 @@ import styled from "styled-components";
 // `;
 
 const Title = styled.h3`
-width: 100%;
+width: 90%;
 display: flex;
-// flex-direction: column;
 color: blue;
 line-height: 1.4rem;
-// background: rgb(222,222,222);
 `;
 
-// const FilmSection = styled.div`
-// width: 100%;
-// display: flex;
-// width: 45px;
-// padding: 1%;
-// flex-flow: row wrap;
 
-// `;
-
-const Container = styled.div`
-display: flex;
-flex-direction: column;
-width: 60%:
-margin: 2px;
-border: 1px solid gray;
-justify-conent: space-evenly;
-align-items: center;
-background: green;
-
-`;
 
 const ObjectProperties = styled.p`
 display: flex;
-// flex-direction: column;
 width: 90%;
-// flex-wrap: wrap;
 line-height: 1rem;
-margin: 2px;
-// border: 1px solid blue;
+margin-top: 2px;
 align-items: left;
 `;
 
 export default function StarwarElement(props){
     return (
-        <Container>
+        <>
 
             {/* <ObjectProperties>
                 {props.mass % 7}
@@ -86,6 +62,6 @@ export default function StarwarElement(props){
                Films: {props.films}
             </FilmSection>
                 */}
-        </Container>
+        </>
     )
 }
