@@ -64,7 +64,7 @@ useEffect(() => {
                             birth_year={stars.birth_year}
                             gender={stars.gender}
                             homeworld={stars.homeworld}
-                            // films={stars.films}
+                            films={stars.films}
                             />
                             </Card>
                     );
