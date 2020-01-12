@@ -18,7 +18,8 @@ width: 33%;
 margin-bottom: 5px;
 justify-conent: space-evenly;
 align-items: center;
-background: rgb(231,232,233);
+// background: rgb(231,232,233);
+background: lightseagreen;
 box-sizing: border-box;
 border-radius: 5px;
 
