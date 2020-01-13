@@ -30,7 +30,7 @@ export default function StarwarElement(props){
         <>
 
             <Title>
-                Name: {props.name}
+                 {props.name}
             </Title>
       
             <ObjectProperties>
